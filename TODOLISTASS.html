@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLISTASS</title>
+    <style>
+
+
+h1 {
+	color: #fff;
+	font-size: 3rem;
+	font-weight: 50;
+	text-align: center;
+	margin: 1rem 0 3rem; 
+	font-family: Georgia;
+}
+
+.title{
+	color: lime;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+
+.inputDiv{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#inputtask{
+    padding:10px 20px;
+    
+    height: 50px;
+    border-radius: 25px;
+    width: 700px;
+    margin: 1rem;
+    transition: .5s;
+    font-size: 2.15rem;
+}
+
+#button{
+	outline: none;
+    border: none;
+    height: 70px;
+    border-radius: 25px;
+    width: 100px;
+    background-color: lime;
+    color: white;
+
+    cursor: pointer;
+    transition: .5s;
+    margin: 1.25rem;
+}
+
+#button:hover{
+	opacity: 0.7;
+}
+
+#displaytask{
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center;
+	text-align:center;
+	margin-top: 0rem;
+  font-size: large;
+}
+
+.item{
+	padding: 0rem;
+	border-bottom: 4px solid #fff;
+	margin-bottom: 1.5rem;
+}
+
+
+
+
+.ButtonDelete{
+	background: none;
+
+	color:rgb(80, 255, 95);
+	font-size: 30px;
+	font-family:  sans-serif;
+	
+}
+p{
+border-width: 0px 0px 4px 0px;
+	color:darkblue;
+	font-size: 35px;
+	font-family:  sans-serif;
+}
+
+    </style>
+</head>
+<body>
+  <h1><span class="title">TODO LIST</span></h1>
+  
+  <div  class="inputDiv"><input type="text" id="inputtask">
+   <button id="button" onclick="demo()"><b>ADD TASK</b></button></div> 
+
+   <p id="displaytask"> 
+
+   </p>
+   <script>
+       function demo()
+       {
+          //Adding tasks
+           var parent=document.createElement("p");
+           document.getElementById("displaytask").appendChild(parent);
+           var taskvalue=document.getElementById("inputtask").value;
+           var additem=document.createElement("p");
+           additem.innerHTML=taskvalue;
+           parent.appendChild(additem);
+
+          
+           //Create delete button
+           var addbutton=document.createElement("button");
+           addbutton.innerHTML="DELETE";
+           addbutton.className="ButtonDelete";
+           parent.appendChild(addbutton);
+        
+            //Tasks for delete(means whenever we click on to delete it has to delete)
+
+            var deltask = document.getElementsByClassName("ButtonDelete");
+			var i;
+			for(i=0; i<deltask.length; i++){
+			
+				deltask[i].onclick = function(){
+				var deletetask = this.parentElement;
+				deletetask.style.display="none";
+			
+				}
+			
+			}
+			
+       }
+   </script>
+</body>
+</html>

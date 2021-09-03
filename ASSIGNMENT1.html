@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey from</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+.d1
+{
+    padding: 10px 20px;
+  text-decoration-color: peru;
+    border-style:solid;
+    margin:20px 0px;
+    border-radius: 5px;
+    background-color: white;
+    border-color:white;
+    font-family: Georgia;
+    
+}
+button
+{
+    padding:15px 70px 15px 70px;
+    border-radius: 25px;
+    margin: 0px 2px;
+}
+.d2
+{
+    padding: 10px 0px;
+    border-style:none;
+    margin:0px 0px;
+    border-radius: 10px;
+}
+body{
+   
+    margin:100px 250px;
+}
+#i
+{
+    padding: 0px 0px 5px 0px;
+    border-width: 0px 0px 3px 0px; 
+}
+
+
+	/* -- Desktop mode 1250 & below--*/
+	@media only screen and (max-width:1250px) {
+		body{
+			margin: 100px 50px;
+		}
+    }
+	/* -- Tablet mode -- */
+	@media only screen and (max-width:800px) {
+		body{
+			margin: 100px 50px;
+		}
+   }
+	/* -- Mobile mode -- */
+	@media only screen and (max-width:600px){
+		body{
+			margin: 50px 20px;
+		}
+    
+		button{
+        margin: 30px 0px 0px 15%;
+		}
+	}
+	@media only screen and (max-width:400px){
+		body{
+			width: 290px;
+		}
+	}
+		
+			
+    </style>
+</head>
+<body bgcolor="aqua">
+    <div class="d1">
+    <h1>Textile & Handloom</h1>
+    <p>This is a survey to collect data on how many people have knowledge about textile and handloom industry</p></div>
+   
+
+  <div class="d1"><p>Is handloom important for India?</p>
+    <div><input type="radio"  name="mine" >
+          <label for="y">YES</label></div>
+          <div><input type="radio"  name="mine" >
+          <label for="n">No</label></div>
+          <div><input type="radio" name="mine" >
+          <label for="m">Maybe</label></div></div>
+
+   
+    <div class="d1"><p>The strength of Handloom lies in introducing innovative designs?</p>
+        <div><input type="radio"  name="m" >
+              <label for="y">YES</label></div>
+              <div><input type="radio"  name="m" >
+              <label for="n">No</label></div>
+              <div><input type="radio" name="m" >
+              <label for="m">Maybe</label></div></div>
+   
+    <div class="d1"><p>Do you think Power loom sector can replicate designs of Handloom industry?</p>
+        <div><input type="radio"  name="a" >
+              <label for="y">YES</label></div>
+              <div><input type="radio"  name="a" >
+              <label for="n">No</label></div>
+              <div><input type="radio" name="a" >
+              <label for="m">Maybe</label></div></div>
+    <div class="d1"><p>Do you know about the schemes and programmes launched by the government for handloom weavers?</p>
+        <div><input type="radio"  name="n" >
+              <label for="y">YES</label></div>
+              <div><input type="radio"  name="n" >
+              <label for="n">No</label></div>
+              <div><input type="radio" name="n" >
+              <label for="m">Maybe</label></div></div>
+    <div class="d1"><p>Will you buy from ecofriendly clothing brands or brands which harm the environment?</p>
+    <div><input type="text" id="i" placeholder="Your answer"></div></div>
+    <div class="d2"><button>Submit</button></div>
+    </body>
+</html>
